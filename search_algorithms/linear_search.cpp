@@ -1,38 +1,26 @@
+// returns position index, else returns -1
 #include <iostream>
 
 using namespace std;
 
-void searcher(int arr[], int key)
+int searcher(int* arr, int key)
 {
 	int length = sizeof(arr);
-	int pos;
-	
+
 	for(int i = 0; i < length; i++)
 	{
 		if(arr[i] == key)
 		{
-			pos = i;
-			break;
-		}
-		else
-		{
-			continue;
+			return i;
 		}
 	}
-	
-	if(pos != 7)
-	{
-		cout<<"The number is present at position "<<pos+1<<".";
-	}
-	else
-	{
-		cout<<"The number is not present.";
-	}
+
+	return -1;
 }
 
-int main()
+int main(void)
 {
 	int array[] = {1, 2, 3, 4, 5, 6, 7};
-	searcher(array, 4);
+	cout<<searcher(array, 6)<<'\n';
 	return 0;
 }
