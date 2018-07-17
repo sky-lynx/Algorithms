@@ -1,4 +1,4 @@
-// retunr position index, else returns -1
+// return position index, else returns -1
 #include <iostream>
 #include <cmath>
 
